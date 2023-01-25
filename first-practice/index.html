@@ -14,11 +14,20 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        
-        function Content() {
+
+        function Header() {
             return (
-                <div>
+                <header>
+                    <p>Header</p>
                     <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1mtEvyef--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" alt="ReactJS logo" width="40px" />
+                </header>
+            )
+        }
+        
+        function MainContent() {
+            return (
+                <main>
+                    <p>Main</p>
                     <h1>Fun Facts about React</h1>
                     <ul>
                         <li>Test</li>
@@ -26,7 +35,26 @@
                         <li>Test3</li>
                         <li>Test4</li>
                     </ul>    
-                </div>
+                </main>
+            )
+        }
+
+        function Footer() {
+            return (
+                <footer>
+                    <p>Footer</p>
+                    <p>&copy; orem, ipsum dolor sit amet consectetur adipisicing elit. Ut totam quia ab, animi laborum nam</p>    
+                </footer>
+            )
+        }
+        
+        function Content() {
+            return (
+                <>
+                    <Header />
+                    <MainContent />
+                    <Footer />                    
+                </>
             )
         }
 
