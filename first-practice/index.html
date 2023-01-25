@@ -7,14 +7,34 @@
     <title>ReactJS Practice #1</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-    <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
+
+
+
+
     <script type="text/babel">
-        ReactDOM.render( <h1>Hello World!</h1>, document.getElementById('root'))
+        
+        function PageTitle() {
+            return (
+                <div className="page-title">
+                    <h1>Hi There!</h1>
+                </div>
+            )
+        }
+
+        function Content() {
+            return (
+                <div className="page-content">
+                    <h2>I'm Hart!</h2>
+                </div>
+            )
+        }
+
+        ReactDOM.render( <div><PageTitle /><Content /></div>, document.getElementById('root') )
+
     </script>
 </body>
 </html>
