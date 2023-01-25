@@ -33,6 +33,16 @@ a:hover {
 body {
     transition: all 150ms ease;
     font-family: 'Inter', sans-serif;
+    background: #282D35 url( ./images/reactjs-icon\ 2.svg ) no-repeat right center;
+    color: #fff;
+    min-height: 100vh;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+#main-content {
+    padding-top: 25px;
 }
 
 .flex {
@@ -44,7 +54,6 @@ body {
 #site-header {
     padding: 33px 0;
     background-color: #21222A;
-    color: #fff;
 }
 
 .logo {
@@ -58,8 +67,43 @@ nav {
     font-weight: 600;
 }
 
+#main-content ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+#main-content ul li {
+    position: relative;
+    /* padding-left: 23px; */
+    margin-bottom: 20px;
+}
+
+#main-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+#main-content ul li::marker {
+    color: #61DAFB;
+    margin-right: 13px;
+    font-size: 1.4rem;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
 @media (min-width: 768px) {
+
+    #main-content {
+        padding-top: 57px;
+    }
+
     nav {
         font-size: 16px;
     }
+
+    h1 {
+        margin-bottom: 46px;
+    }
+
 }
