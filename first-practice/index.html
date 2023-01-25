@@ -10,30 +10,30 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+
     <div id="root"></div>
-
-
-
 
     <script type="text/babel">
         
-        function PageTitle() {
-            return (
-                <div className="page-title">
-                    <h1>Hi There!</h1>
-                </div>
-            )
-        }
-
         function Content() {
             return (
-                <div className="page-content">
-                    <h2>I'm Hart!</h2>
+                <div>
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1mtEvyef--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" alt="ReactJS logo" width="40px" />
+                    <h1>Fun Facts about React</h1>
+                    <ul>
+                        <li>Test</li>
+                        <li>Test2</li>
+                        <li>Test3</li>
+                        <li>Test4</li>
+                    </ul>    
                 </div>
             )
         }
 
-        ReactDOM.render( <div><PageTitle /><Content /></div>, document.getElementById('root') )
+        ReactDOM.render(
+            <Content />, 
+            document.getElementById('root')
+        )
 
     </script>
 </body>
