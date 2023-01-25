@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -18,8 +19,18 @@
         function Header() {
             return (
                 <header>
-                    <p>Header</p>
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1mtEvyef--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" alt="ReactJS logo" width="40px" />
+                    <div className="container">
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1mtEvyef--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" alt="ReactJS logo" width="40px" />
+                        <nav>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </header>
             )
         }
@@ -27,14 +38,15 @@
         function MainContent() {
             return (
                 <main>
-                    <p>Main</p>
-                    <h1>Fun Facts about React</h1>
-                    <ul>
-                        <li>Test</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                    </ul>    
+                    <div className="container">
+                        <h1>Fun Facts about React</h1>
+                        <ul>
+                            <li>Test</li>
+                            <li>Test2</li>
+                            <li>Test3</li>
+                            <li>Test4</li>
+                        </ul>  
+                    </div>  
                 </main>
             )
         }
@@ -42,8 +54,10 @@
         function Footer() {
             return (
                 <footer>
-                    <p>Footer</p>
-                    <p>&copy; orem, ipsum dolor sit amet consectetur adipisicing elit. Ut totam quia ab, animi laborum nam</p>    
+                    <div className="container">
+                        <p>Footer</p>
+                        <p>&copy; orem, ipsum dolor sit amet consectetur adipisicing elit. Ut totam quia ab, animi laborum nam</p> 
+                    </div>   
                 </footer>
             )
         }
