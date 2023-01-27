@@ -88,8 +88,17 @@ body {
     padding: 49px 0 30px;
 }
 
+.cards-wrapper {
+    overflow: visible;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 18px;
+    overflow: hidden;
+}
+
 .card {
-    max-width: 176px;
+    min-width: 176px;
     color: #222;
 }
 
