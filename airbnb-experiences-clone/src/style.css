@@ -89,10 +89,9 @@ body {
 }
 
 .cards-wrapper {
-    overflow: visible;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     column-gap: 18px;
     overflow: hidden;
 }
@@ -100,6 +99,8 @@ body {
 .card {
     min-width: 176px;
     color: #222;
+    position: relative;
+    padding-bottom: 15px;
 }
 
 .card__image {
@@ -163,4 +164,12 @@ body {
     font-weight: 300;
     font-size: 12px;
     line-height: 110%;
+    margin-bottom: .5em;
+}
+
+.card__info--price {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

@@ -1,46 +1,32 @@
 import React from "react"
-// import CardImage from '../images/image.jpg'
+import experiencesData from "../experiencesData"
 import Star from '../images/star.svg'
 
 export default function CardsSection() {
+    const experiences = experiencesData.map(exp => {
+        return <Card 
+                    tag={ exp.tag } 
+                    image={ exp.image } 
+                    rating={ exp.rating } 
+                    numberOfFeedbacks={ exp.numberOfFeedbacks } 
+                    country={ exp.country } 
+                    description={ exp.description } 
+                    price={ exp.price } 
+                /> 
+    })
+
     return (
         <section id="cards" className="cards">
             <div className="container">
                 <div className="cards-wrapper">
-                    <Card 
-                        tag='sold out'
-                        image='https://images.pexels.com/photos/10627367/pexels-photo-10627367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                        rating='5.0'
-                        numberOfFeedbacks='8'
-                        country='Canada'
-                        description='Spending time with loved ones'
-                        price='32.00'
-                    />
-                    <Card 
-                        tag='online'
-                        image='https://images.pexels.com/photos/15283479/pexels-photo-15283479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                        rating='4.1'
-                        numberOfFeedbacks='3'
-                        country='Australia'
-                        description='Outdoor wedding celebrations'
-                        price='99.00'
-                    />
-                    <Card 
-                        tag='limited'
-                        image='https://images.pexels.com/photos/5644294/pexels-photo-5644294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                        rating='4.9'
-                        numberOfFeedbacks='20'
-                        country='South Korea'
-                        description='Cold mornings in Seoul'
-                        price='23.00'
-                    />
+                    { experiences }
                 </div>
             </div>
         </section>
     )
 }
 
-export function Card(props) {
+function Card(props) {
     return (
         <div className="card">
             <div className="card__image">
