@@ -93,7 +93,20 @@ body {
     justify-content: flex-start;
     align-items: stretch;
     column-gap: 18px;
-    overflow: hidden;
+    overflow-x: scroll;
+    padding-bottom: 15px;
+    appearance: none;
+}
+
+/* hide scrollbar but allow scrolling */
+.cards-wrapper {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+.cards-wrapper::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 
 .card {
@@ -150,6 +163,10 @@ body {
     font-weight: 300;
     font-size: 12px;
     line-height: 110%;
+}
+
+.location {
+    text-transform: capitalize;
 }
 
 .rating {

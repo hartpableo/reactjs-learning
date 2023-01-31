@@ -4,14 +4,9 @@ import Star from '../images/star.svg'
 
 export default function CardsSection() {
     const experiences = experiencesData.map(exp => {
-        return <Card 
-                    tag={ exp.tag } 
-                    image={ exp.image } 
-                    rating={ exp.rating } 
-                    numberOfFeedbacks={ exp.numberOfFeedbacks } 
-                    country={ exp.country } 
-                    description={ exp.description } 
-                    price={ exp.price } 
+        return <Card
+                    key={ exp.id }
+                    { ...exp }
                 /> 
     })
 
@@ -27,11 +22,19 @@ export default function CardsSection() {
 }
 
 function Card(props) {
+    let tagText
+    if ( props.spots == 0 ) {
+        tagText = 'sold out'
+    } else if ( props.location == 'online' ) {
+        tagText = 'online'
+    }
+    
     return (
         <div className="card">
             <div className="card__image">
-                <div className="card__image--tag">{ props.tag }</div>
-                <img src={ props.image } alt="experience image" />
+                { tagText && 
+                <div className="card__image--tag">{ tagText }</div> }
+                <img src={ props.image } alt="experience" />
             </div>
             <div className="card__info">
                 <div className="card__info--header">
@@ -40,7 +43,7 @@ function Card(props) {
                         <span className="rating__digit">{ props.rating }</span>
                         <span className="rating__numbers">({ props.numberOfFeedbacks })</span>
                     </div>
-                    &nbsp;&bull;&nbsp; <span className="country">{ props.country }</span>
+                    &nbsp;&bull;&nbsp; <span className="location">{ props.location }</span>
                 </div>
                 <div className="card__info--description">
                     { props.description }
